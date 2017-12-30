@@ -6,10 +6,14 @@ using System.Web.Mvc;
 
 namespace EcommerceSite.Controllers
 {
-    public class HomeController : Controller
+    public class ProductController : Controller
     {
-        // GET: Home
+        // GET: Product
         public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult SearchProduct()
         {
             return View();
         }

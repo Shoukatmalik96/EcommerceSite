@@ -1,31 +1,291 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<div class="container">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <!-- start of row -->
+    <div class="row clearfix">
+        <div class="sixteen columns">
+            <!-- twitter feed -->
+            <div class="twitter_feed">
+                <ul class="tweet_list"></ul>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <!-- end of row -->
+
+    <div class="sixteen columns">
+
+        <!-- start of featured area -->
+        <div id="featured-area" class="row">
+            <!-- start of slider -->
+            <div class="slider">
+
+                <div id="slidyBanner" class="slidyContainer" title="Your tooltip text">
+                    <div class="slidySlides">
+
+                        <!-- Each slide is wrapped in figure section -->
+                        <!-- Slide 1 -->
+                        <!-- add the 'slidyCurrent' class to which slide you want as default -->
+                        <figure class="slidyCurrent">
+                            <!-- Your context goes here -->
+                            <img alt="" src="@Url.Content("~/Content/images/slides/responsly/img-1.jpg")" />
+                            <!-- Use the figcaption element to add captions -->
+                            <figcaption>
+                                <h4 class="dropcap-title"><span class="dropcap-circle blue">1</span>Flexibility</h4>
+                                <p>Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui.</p>
+                                <a href="#" class="readmore">Read more</a>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Slide 2 -->
+                        <figure>
+                            <!-- Your context goes here -->
+                            <img alt="" src="@Url.Content("~/Content/images/slides/responsly/img-2.jpg")" />
+                            <!-- Use the figcaption element to add captions -->
+                            <figcaption>
+                                <h4 class="dropcap-title"><span class="dropcap-circle blue">2</span>Responsive</h4>
+                                <p>Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui.</p>
+                                <a href="#" class="readmore">Read more</a>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Slide 3 -->
+                        <figure>
+                            <!-- Your context goes here -->
+                            <img alt="" src="@Url.Content("~/Content/images/slides/responsly/img-3.jpg")" />
+                            <!-- Use the figcaption element to add captions -->
+                            <figcaption>
+                                <h4 class="dropcap-title"><span class="dropcap-circle blue">3</span>jQuery powered</h4>
+                                <p>Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui.</p>
+                                <a href="#" class="readmore">Read more</a>
+                            </figcaption>
+                        </figure>
+
+                        <!-- Slide 3 -->
+                        <figure>
+                            <!-- Your context goes here -->
+                            <img alt="" src="@Url.Content("~/Content/images/slides/responsly/img-4.jpg")" />
+                            <!-- Use the figcaption element to add captions -->
+                            <figcaption>
+                                <h4 class="dropcap-title"><span class="dropcap-circle blue">4</span>HTML5 CSS3</h4>
+                                <p>Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui.</p>
+                                <a href="#" class="readmore">Read more</a>
+                            </figcaption>
+                        </figure>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- end of slider -->
+        </div>
+        <!-- end of featured area -->
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+
+    <!-- start of row -->
+    <div class="row clearfix">
+
+        <div class="sixteen columns">
+
+            <div class="intro">
+                <ul id="fade">
+                    <li>Yes, we make awesome website theme</li>
+                    <li>Blends creative idea with premium coffee</li>
+                    <li>Brings new experiences for customers</li>
+                </ul>
+            </div>
+
+        </div>
+
     </div>
+    <!-- end of row -->
+
+    <div class="sixteen columns">
+        <div class="divider"></div>
+    </div>
+
+
+    <div class="row clearfix">
+
+        <div class="eight columns">
+            <h5>Dedicated web design service</h5>
+            <div class="row">
+                <img src="@Url.Content("~/Content/images/dummy-2.png")" alt="" class="left scale-with-grid" />
+                <p>
+                    <span class="dropcap-circle blue">A</span>
+                    Lorem ipsum dolor sit amet, iusto graece quaerendum eu qui, pri eu erat partem consetetur, has ea dolores detracto.
+                    Mel tantas utamur docendi at, eam exerci fabulas invidunt at. Cu virtute legimus recusabo has,
+                    ea choro vocibus eloquentiam quo. Rebum honestatis eu vim, sumo melius labores uit sea, cum eu erat.
+                </p>
+                <a href="#" class="readmore">Read more</a>
+            </div>
+
+            <div class="row">
+                <div class="eight columns alpha">
+                    <h5>Read what people say about us</h5>
+                    <blockquote class="triangle-right top">
+                        <p>
+                            "Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui. At lucilius liberavisse eos, ad doctus civibus mei.
+                            Et reque altera cum. Aliquam nominati et vis, fugit dolore voluptaria quo et, eu mea euripidis adipiscing."
+                        </p>
+                        <cite>Mike company</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+
+        <div class="eight columns">
+            <h5>Key features & benefits</h5>
+            <div class="four columns alpha">
+                <div class="row">
+                    <p class="italic">Responsive layout</p>
+                    <img src="images/icons/icon-1.png" alt="" class="icon32" />
+                    <p>
+                        Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id et clita praesent qui. At lucilius liberavisse.
+                    </p>
+                    <a href="#" class="readmore">Read more</a>
+                </div>
+            </div>
+
+            <div class="four columns omega">
+                <div class="row">
+                    <p class="italic">Media queries</p>
+                    <img src="images/icons/icon-2.png" alt="" class="icon32" />
+                    <p>
+                        Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id et clita praesent qui. At lucilius liberavisse.
+                    </p>
+                    <a href="#" class="readmore">Read more</a>
+                </div>
+            </div>
+            <div class="four columns alpha">
+                <div class="row">
+                    <p class="italic">Easy to customize</p>
+                    <img src="@Url.Content("~/Content/images/icons/icon-3.png")" alt="" class="icon32" />
+                    <p>
+                        Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id et clita praesent qui. At lucilius liberavisse.
+                    </p>
+                    <a href="#" class="readmore">Read more</a>
+                </div>
+            </div>
+
+            <div class="four columns omega">
+                <div class="row">
+                    <p class="italic">Fast loading</p>
+                    <img src="@Url.Content("~/Content/images/icons/icon-4.png")" alt="" class="icon32" />
+                    <p>
+                        Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id et clita praesent qui. At lucilius liberavisse.
+                    </p>
+                    <a href="#" class="readmore">Read more</a>
+                </div>
+            </div>
+            <div class="four columns alpha">
+                <div class="row">
+                    <p class="italic">Free support</p>
+                    <img src="@Url.Content("~/Content/images/icons/icon-5.png")" alt="" class="icon32" />
+                    <p>
+                        Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id et clita praesent qui. At lucilius liberavisse.
+                    </p>
+                    <a href="#" class="readmore">Read more</a>
+                </div>
+            </div>
+
+            <div class="four columns omega">
+                <div class="row">
+                    <p class="italic">Well documented</p>
+                    <img src="@Url.Content("~/Content/images/icons/icon-6.png")" alt="" class="icon32" />
+                    <p>
+                        Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id et clita praesent qui. At lucilius liberavisse.
+                    </p>
+                    <a href="#" class="readmore">Read more</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!-- start of row -->
+    <div class="row clearfix">
+        <div class="sixteen columns">
+            <h5>Recent works</h5>
+        </div>
+
+
+
+        <!-- start of thumbnails for recent works thumbnails -->
+        <div class="thumbnails">
+            <ul>
+                <li class="four columns thumb-item">
+                    <img src="@Url.Content("~/Content/images/portfolio/img-1.jpg")" alt="" class="imgshadow scale-with-grid" />
+                    <div class="caption">
+                        <p class='captionInside'>
+                            <a class="zoom" href="images/portfolio/big-img-1.jpg">Zoom</a>
+                            <a class="detail" href="portfolio-detail.html">Detail</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="four columns thumb-item">
+                    <img src="@Url.Content("~/Content/images/portfolio/img-2.jpg")" alt="" class="imgshadow scale-with-grid" />
+                    <div class='caption'>
+                        <p class='captionInside'>
+                            <a class="zoom" href="images/portfolio/big-img-2.jpg">Zoom</a>
+                            <a class="detail" href="portfolio-detail.html">Detail</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="four columns thumb-item">
+                    <img src="@Url.Content("~/Content/images/portfolio/img-3.jpg")" alt="" class="imgshadow scale-with-grid" />
+                    <div class='caption'>
+                        <p class='captionInside'>
+                            <a class="zoom" href="images/portfolio/big-img-3.jpg">Zoom</a>
+                            <a class="detail" href="portfolio-detail.html">Detail</a>
+                        </p>
+                    </div>
+                </li>
+                <li class="four columns thumb-item">
+                    <img src="@Url.Content("~/Content/images/portfolio/img-5.jpg")" alt="" class="imgshadow scale-with-grid" />
+                    <div class='caption'>
+                        <p class='captionInside'>
+                            <a class="zoom" href="images/portfolio/big-img-5.jpg">Zoom</a>
+                            <a class="detail" href="portfolio-detail.html">Detail</a>
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+        <!-- end of thumbnails -->
+    </div>
+    <!-- end of row -->
+
+    <div class="clear"></div>
+
+    <!-- start of row -->
+    <div class="row clearfix clients">
+        <div class="sixteen columns">
+            <h5>Some of our awesome clients</h5>
+        </div>
+
+
+        <div class="four columns">
+            <p>
+                Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui. At lucilius liberavisse eos, ad doctus.
+            </p>
+        </div>
+        <ul class="clients">
+            <li class="client two columns"><a href="#"><span class="client1"></span>  <img src="@Url.Content("~/Content/images/portfolio/img-1.jpg")" alt="" class="imgshadow scale-with-grid" />
+            <li class="client two columns"><a href="#"><span class="client2"></span> <img src="@Url.Content("~/Content/images/portfolio/img-2.jpg")" alt="" class="imgshadow scale-with-grid" />
+            <li class="client two columns"><a href="#"><span class="client3"></span>  <img src="@Url.Content("~/Content/images/portfolio/img-3.jpg")" alt="" class="imgshadow scale-with-grid" />
+            <li class="client two columns"><a href="#"><span class="client4"></span>  <img src="@Url.Content("~/Content/images/portfolio/img-4.jpg")" alt="" class="imgshadow scale-with-grid" />
+            <li class="client two columns"><a href="#"><span class="client5"></span>  <img src="@Url.Content("~/Content/images/portfolio/img-5.jpg")" alt="" class="imgshadow scale-with-grid" />
+            <li class="client two columns"><a href="#"><span class="client6"></span>  <img src="@Url.Content("~/Content/images/portfolio/img-6.jpg")" alt="" class="imgshadow scale-with-grid" />
+</ul>
+    </div>
+    <!-- end of row -->
+
 </div>
