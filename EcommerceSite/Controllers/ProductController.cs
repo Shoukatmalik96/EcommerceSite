@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data;
 
 namespace EcommerceSite.Controllers
 {
@@ -16,6 +17,10 @@ namespace EcommerceSite.Controllers
         public ActionResult SearchProduct()
         {
             return View();
+        }
+        public void getCategory()
+        {
+
         }
     }
 }
