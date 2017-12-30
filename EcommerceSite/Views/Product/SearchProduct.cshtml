@@ -35,13 +35,19 @@
 
                 <div class="widget row">
                     <h5>Blog categories</h5>
-
-                    <ul class="tick-list">
-                        <li><a href="#">Entrepreneurship</a><span class="postcount">(20)</span></li>
-                        <li><a href="#">Internet marketing</a><span class="postcount">(20)</span></li>
-                        <li><a href="#">Web design development</a><span class="postcount">(20)</span></li>
-                        <li><a href="#">Technology</a><span class="postcount">(20)</span></li>
-                    </ul>
+                     <ul class="tick-list">
+                    try{
+                        @foreach (var c in ViewBag.Cat)
+                        {
+                            
+                              <li><a href="">@c.CategoryName</a><span class="postcount">(@c.noofproduct)</span></li>
+                            
+                        }
+                       }catch(Exception ex)
+                         {
+                              console.w
+                         }                   
+                     </ul>
                 </div>
 
                 <div class="widget row">
