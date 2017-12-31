@@ -35,21 +35,24 @@
 
                 <div class="widget row">
                     <h5>Blog categories</h5>
-                     <ul class="tick-list">
-                    try{
+                    <ul class="tick-list">
                         @foreach (var c in ViewBag.Cat)
                         {
-                            
-                              <li><a href="">@c.CategoryName</a><span class="postcount">(@c.noofproduct)</span></li>
-                            
-                        }
-                       }catch(Exception ex)
-                         {
-                              console.w
-                         }                   
-                     </ul>
-                </div>
 
+                            <li><a href="#">(@c.CategoryName)</a><span class="postcount">(@c.noofproduct)</span></li>
+                         }
+                    </ul>
+                </div>
+                <div class="widget row">
+                    <h5>Blog Suppliers</h5>
+                    <ul class="tick-list">
+                        @foreach (var c in ViewBag.SupRec)
+                                {
+                                    
+                         <li><a href="#">(@c.CompanyName)</a><span class="postcount">(@c.SupplierID )</span></li>
+                        }
+                    </ul>
+                </div>
                 <div class="widget row">
                     <h5>Advertisement</h5>
                     <a href="#"><img src="images/ads/img-1.jpg" alt="" class="imgshadow scale-with-grid" /></a>

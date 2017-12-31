@@ -1,0 +1,192 @@
+﻿@model EcommerceSite.Models.Registration
+
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container bodycontent">
+
+    <div class="row clearfix">
+        <div class="sixteen columns headline">
+            <h2>Contact page</h2>
+            <p class="italic">You can write any description here or delete if you dont want to use this</p>
+        </div>
+        <!-- end of headline -->
+    </div>
+    <div class="sixteen columns">
+        <div class="divider row"></div>
+    </div>
+
+    <div id="maincontent" class="clearfix">
+
+
+        <div class="sixteen columns">
+            <h5>Our office map location</h5>
+            <img src="images/map.jpg" alt="" class="imgshadow scale-with-grid" />
+        </div>
+
+        <div class="twelve columns">
+            <section id="content">
+                <article class="row">
+                    <h5>Get in touch with us</h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, in usu electram salutatus, et eloquentiam delicatissimi nec. Erat decore verear ius et, vim aeterno delectus an. Mea ea aliquam eruditi docendi, vim et odio mediocrem. Nobis persius ex eum, dicat persecuti cum in
+                    </p>
+
+                </article>
+                <section id="contact">
+
+                    @using (Html.BeginForm())
+    {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <fieldset>
+                    <legend>Registraion</legend>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CUSTOMER_NAME)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.CUSTOMER_NAME)
+                        @Html.ValidationMessageFor(model => model.CUSTOMER_NAME)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.EMAIL_ID)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.EMAIL_ID)
+                        @Html.ValidationMessageFor(model => model.EMAIL_ID)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PIN_CODE)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.PIN_CODE)
+                        @Html.ValidationMessageFor(model => model.PIN_CODE)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.KEYWORD)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.KEYWORD)
+                        @Html.ValidationMessageFor(model => model.KEYWORD)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.ADDRESS)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.ADDRESS)
+                        @Html.ValidationMessageFor(model => model.ADDRESS)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.COUNTRY_ID)
+                    </div>
+                    <div class="editor-field">
+                        <select id="country" name="country">
+                            @foreach (var c in ViewBag.Country)
+            {
+                <option value="@c.COUNTRY_ID">@c.COUNTRY_NAME</option>
+}
+                        </select>
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CITY_ID)
+                    </div>
+                    <div class="editor-field">
+                        <select id="city" name="city">
+                            @foreach (var c in ViewBag.CITY)
+            {
+                <option value="@c.CITY_ID">@c.CITY_NAME</option>
+}
+
+                        </select>
+
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.PASSWORD)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.PASSWORD)
+                        @Html.ValidationMessageFor(model => model.PASSWORD)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.CPASSWORD)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.CPASSWORD)
+                        @Html.ValidationMessageFor(model => model.CPASSWORD)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.TermsAccepted)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.TermsAccepted)
+                        @Html.ValidationMessageFor(model => model.TermsAccepted)
+                    </div>
+
+                    <p>
+                        <input type="submit" value="Create" />
+                    </p>
+                </fieldset>
+}
+
+
+                </section>
+       
+    
+
+
+
+        <div class="four columns">
+            <aside>
+                <div class="sidebar">
+                    <div class="widget row">
+                        <h5>Our address</h5>
+                        <p>We're available on 5 business days from 08-AM till 17-PM. Feel free to visit our office anytime.</p>
+                        <p>
+                            Veryhigh tower #12 Floor Q.03 Kv.101<br />
+                            Kebanjiran sreet 07 - Jakarta, Indonesia
+                        </p>
+                        <ul class="square">
+                            <li>Email :<a href="#">mail@website.com</a></li>
+                            <li>Phone :<a href="#">+62252001910</a></li>
+                            <li>Fax :<a href="#">+62252001911</a></li>
+                            <li>Website :<a href="#">www.websitename.com</a></li>
+                        </ul>
+
+                    </div>
+
+                    <div class="widget row">
+                        <h5>What people says</h5>
+
+                        <blockquote class="boxed row">
+                            <p>
+                                Lorem ipsum dolor sit amet, vel aeque veritus noluisse no, id clita praesent qui.
+                                At lucilius liberavisse eos, ad doctus civibus mei, quidam numquam appareat pri ut.
+                                Mutat iudico vis in, mea aeque tamquam scripserit an
+                            </p>
+                            <cite>John company</cite>
+                        </blockquote>
+
+                    </div>
+
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+</div><!-- container -->
+
